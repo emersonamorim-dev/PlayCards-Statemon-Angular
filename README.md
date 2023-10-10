@@ -37,7 +37,9 @@ Para iniciar um servidor de desenvolvimento, execute o comando abaixo. Navegue p
 ```
 npm install --save-dev @angular-devkit/build-angular
 ```
-
+```
+npm install sweetalert2
+```
 ```
 ng serve
 ```

@@ -31,6 +31,11 @@ npm install
 ### Desenvolvimento
 Para iniciar um servidor de desenvolvimento, execute o comando abaixo. Navegue para http://localhost:4200/. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de origem.
 
+### Antes de rodar aplicação rode esse comando para corrigir falhas:
+```
+npm install --save-dev @angular-devkit/build-angular
+```
+
 ```
 ng serve
 ```

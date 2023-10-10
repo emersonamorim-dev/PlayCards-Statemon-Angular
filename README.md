@@ -1,6 +1,8 @@
 # PlayCards Statemon - Angular com TypeScript 🚀 🔄 🌐
 ### Descrição
-Codifição de aplicação de Teste Técnico do Grupo Estadão em Angular com Typescript que demonstra uso de Local Store do framework para salvar dados na memória do navegador do usuário de forma funcional e bem organizada e foi implementado um Jogo de Cartas baseado na jogabilidade do UNO jogo de Cartas Infantil com a criação de um jogo de cartas interativo e a partida sendo disputada entre usuário e contra o computador. Nessa aplicação utilizei Técnicas Avançadas de Programação e utilizei várias tecnologias e práticas modernas para criar uma aplicação web responsiva e amigável.
+Codifiquei uma aplicação para o Teste Técnico do Grupo Estadão, utilizando Angular com TypeScript. Esta aplicação demonstra o uso do Local Store do framework para salvar dados na memória do navegador do usuário de forma funcional e bem organizada. Implementei um Jogo de Cartas, inspirado na jogabilidade do UNO, um conhecido jogo de cartas infantil.
+Nesta aplicação, criei um jogo de cartas interativo, onde a partida é disputada entre o usuário e o computador. Utilizei Técnicas avançadas de Programação avançadas e incorporei várias tecnologias e práticas modernas para criar uma aplicação web responsiva e amigável."
+
 
 ### Funcionalidades
 Jogo de Cartas Interativo: Os usuários podem jogar um jogo de cartas virtual com uma interface intuitiva.

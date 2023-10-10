@@ -10,7 +10,7 @@ Personalização: Os usuários podem personalizar seus baralhos de cartas.
 
 
 ### Pré-requisitos
-Antes de começar, certifique-se de ter o Node.js 1.6 e o Angular 8.0 instalados em seu sistema. Se não, você pode instalá-los usando os seguintes comandos:
+Antes de começar, certifique-se de ter o Node.js 16 e o Angular 8.0 instalados em seu sistema. Se não, você pode instalá-los usando os seguintes comandos:
 
 
 - Instalação do Angular

@@ -19,8 +19,8 @@ export class GameService {
   currentCard: Card;
   discardPileChanged = new Subject<void>();
 
-  private playerScore: number;
-  private computerScore: number;
+  public playerScore: number;
+  public computerScore: number;
   initialHandSize: number = 1;
 
   constructor(private http: HttpClient) {

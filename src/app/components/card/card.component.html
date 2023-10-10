@@ -1,0 +1,55 @@
+<!-- Spinner de Carregamento -->
+<div *ngIf="isLoading" class="loader-container">
+  <div class="loader"></div>
+</div>
+
+<div *ngIf="!isLoading" class="cards-container">
+  <div *ngFor="let card of displayedCards" class="card tp-wrapper">
+    <div class="tp-box flip-container" (click)="toggleFlip(card)" [@flipState]="card.isFlipped ? 'active' : 'inactive'">
+      <div class="tp-box__side tp-box__front front">
+        <img [src]="card.images.small" alt="{{ card.name }}" class="card-image">
+      </div>
+      <div class="tp-box__side tp-box__back back">
+        <div class="card-content">
+          <h2 class="card-title">{{ card.name }}</h2>
+
+          <!-- Você pode adicionar mais detalhes do card aqui -->
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="btn-create" (click)="createDeck(card); $event.stopPropagation()">Criar Baralho</button>
+      <button class="btn-edit" (click)="addCards(card); $event.stopPropagation()">Adicionar Carta</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Paginação -->
+<div *ngIf="!isLoading" class="pagination">
+  <button
+    (click)="previousPage()"
+    [disabled]="currentPage === 1"
+    class="px-4 py-2 border rounded-l text-gray-800 border-gray-300 bg-white hover:bg-gray-100"
+  >
+    Anterior
+  </button>
+
+  <ng-container *ngFor="let page of getVisiblePageNumbers(); let i = index">
+    <button
+      (click)="goToPage(page)"
+      [ngClass]="{'active': currentPage === page}"
+      class="px-4 py-2 border text-gray-800 border-gray-300 bg-white hover:bg-gray-100"
+    >
+      {{page}}
+    </button>
+  </ng-container>
+
+  <button
+    (click)="nextPage()"
+    [disabled]="currentPage >= totalPages"
+    class="px-4 py-2 border rounded-r text-gray-800 border-gray-300 bg-white hover:bg-gray-100"
+  >
+    Próximo
+  </button>
+</div>

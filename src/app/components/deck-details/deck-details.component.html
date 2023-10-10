@@ -1,0 +1,12 @@
+<!-- deck-details.component.html -->
+<div *ngIf="card" class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+  <h1 class="text-2xl font-bold mb-4">{{ card.name }}</h1>
+  <img [src]="card.images.large" alt="{{ card.name }}" class="w-full rounded-lg mb-6">
+
+  <!-- Adicione outros detalhes conforme necessário -->
+  <div class="text-gray-700">
+    <p><strong>ID:</strong> {{ card.id }}</p>
+    <p><strong>Supertype:</strong> {{ card.supertype }}</p>
+    <p><strong>HP:</strong> {{ card.hp }}</p>
+  </div>
+</div>

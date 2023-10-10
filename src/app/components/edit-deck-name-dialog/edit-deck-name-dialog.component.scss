@@ -1,0 +1,53 @@
+// Estilização para o campo de entrada
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+
+  input {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+// Estilização para os botões
+mat-dialog-actions {
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    // Estilização para o botão de cancelar
+    &:first-child {
+      background-color: #ff6262;
+      color: white;
+      &:hover {
+        background-color: #ff3f3f;
+      }
+    }
+
+    // Estilização para o botão de salvar
+    &:last-child {
+      background-color: #19a3c9;
+      color: white;
+      &:hover {
+        background-color: #3fa9ff;
+      }
+    }
+  }
+}

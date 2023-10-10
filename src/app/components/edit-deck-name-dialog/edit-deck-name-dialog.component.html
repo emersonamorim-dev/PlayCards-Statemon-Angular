@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Editar Nome do Baralho</h2>
+<mat-dialog-content>
+  <button mat-icon-button class="close-button mb-4" (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+  <mat-form-field appearance="fill">
+    <mat-label>Edite Nome: </mat-label>
+    <mat-form-field>
+      <input [(ngModel)]="data.deckName" matInput placeholder="Nome do Baralho">
+    </mat-form-field>
+
+
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button (click)="onSave()">Salvar</button>
+</mat-dialog-actions>
+

@@ -1,0 +1,196 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.tp-wrapper {
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+
+.tp-box {
+  position: relative;
+  width: 243px;
+  height: 345px;
+  margin: 3rem auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform         : transform 1s;
+      -ms-transform         : transform 1s;
+          transform         : transform 1s;
+}
+.tp-box__side {
+   width: 100%;
+  height: 100%;
+  position: absolute;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  color: #fff;
+  text-align: center;
+  line-height: 345px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tp-box__front {
+  background: #fff;
+  -webkit-transform : rotateY(0deg);
+  -ms-transform     : rotateY(0deg);
+  transform         : rotateY(0deg);
+}
+.tp-box__back {
+  background: #65efef;
+  -webkit-transform : rotateY(-180deg);
+  -ms-transform     : rotateY(-180deg);
+  transform         : rotateY(-180deg);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: rgb(25, 163, 201);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card-image {
+  display: block;
+  margin: auto;
+  width: auto;
+  max-width: calc(100% - 40px);
+  height: auto;
+  max-height: 342px;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+/* Estilos para os botões Editar Baralho e Criar Baralho */
+.btn-edit, .btn-create {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-edit {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.btn-create {
+  background-color: #00cc99;
+  color: #fff;
+}
+
+/* Adiciona estilos para o hover */
+.btn-edit:hover, .btn-create:hover {
+  opacity: 0.8;
+}
+
+
+// Estilização da paginação
+.pagination {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00cc99;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #ccc;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    &.active {
+      background-color: #ffcc00;
+      color: #fff;
+    }
+  }
+}
+

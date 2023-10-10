@@ -1,0 +1,41 @@
+<form (ngSubmit)="onSubmit()" class="max-w-xl mx-auto p-4 shadow-md rounded-md">
+
+  <div class="mb-4">
+    <button mat-icon-button class="close-button mb-4" (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <label for="name" class="block text-gray-800 text-lg font-medium mb-2">Nome do Baralho</label>
+    <input
+      type="text"
+      id="name"
+      [(ngModel)]="deck.name"
+      name="name"
+      required
+      placeholder="Digite Nome do Baralho"
+      class="mt-1 p-2 w-full border rounded-md"
+    >
+  </div>
+
+  <div class="buttons-container mb-4">
+    <!-- Botão para criar baralho -->
+    <button
+      type="submit"
+      class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+    >
+      Criar Baralho
+    </button>
+
+        <!-- Botão para adicionar cartas -->
+        <button
+        class="add-card-button" (click)="EditDecks()">
+        Editar Baralho
+      </button>
+
+      <div *ngFor="let card of cards">
+        <img [src]="card.imageUrl" (click)="selectCard(card)" alt="Clique para selecionar a carta">
+      </div>
+  </div>
+
+
+
+</form>

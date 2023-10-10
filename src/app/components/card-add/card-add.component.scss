@@ -1,0 +1,124 @@
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+  div.mb-6 {
+    margin-bottom: 1.5rem;
+
+
+    label {
+      display: block;
+      color: #2d3748;
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+
+form {
+  position: relative;
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+
+  .select-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.custom-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+    background-color: #fff;
+}
+
+/* Adiciona o ícone de seta para baixo */
+.select-container:after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    font-size: 20px;
+    line-height: 40px;
+    padding-right: 10px;
+    pointer-events: none;
+    color: #4299e1;
+}
+
+  select.form-select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #add8e6;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    appearance: none;
+
+    // Estilização para o foco
+    &:focus {
+      outline: none;
+      border-color: darken($color: #add8e6, $amount: 10);
+      box-shadow: 0 0 5px lighten($color: #add8e6, $amount: 20);
+    }
+
+    // Estilização para diferentes tamanhos de tela
+    @media (min-width: 768px) {
+      max-width: 500px;
+    }
+  }
+
+
+  .buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .add-card-button, .create-deck-button {
+    padding: 8px 16px;
+    background-color: #4299e1;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 102, 204, 0.3), 0 2px 4px -1px rgba(0, 102, 204, 0.06);
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #3182ce;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(66, 153, 225, 0.5);
+    }
+
+    &:disabled {
+      background-color: #cbd5e0;
+      cursor: not-allowed;
+    }
+  }
+
+}

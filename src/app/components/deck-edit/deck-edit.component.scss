@@ -1,0 +1,148 @@
+::ng-deep .btn-play {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
+::ng-deep .btn-create-card {
+  background-color: #00cc99;
+  color: #fff;
+}
+
+::ng-deep .btn-create-deck {
+  background-color: #87e643;
+  color: #fff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+button:not(:last-child) {
+  margin-right: 15px;
+}
+
+
+.table-container {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  height: 70vh;
+  overflow-y: auto;
+
+  .button-spacing {
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 80px;
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+  }
+
+
+  .mat-mdc-table {
+    --mat-table-row-item-outline-width: 1px;
+    white-space: normal;
+    background-color: white;
+    width: 100%;
+  }
+
+  mat-cell:first-of-type, mat-header-cell:first-of-type, mat-footer-cell:first-of-type {
+    padding-left: 24px;
+    padding-right: 60px;
+  }
+
+  mat-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .mat-header-cell, mat-cell {
+    padding: 16px;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+
+    @media (max-width: 600px) {
+      padding: 12px;
+    }
+  }
+
+
+  mat-row:hover {
+    background-color: #f3f3f3;
+  }
+
+  mat-header-row {
+    background-color: #19a3c9;
+
+  }
+
+/* Estilos para os botões Editar Baralho e Criar Baralho */
+.btn-play, .btn-create {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-play {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.btn-create {
+  background-color: #00cc99;
+  color: #fff;
+}
+
+
+/* Adiciona estilos para o hover */
+.btn-edit:hover, .btn-create:hover {
+  opacity: 0.8;
+}
+
+
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    mat-icon {
+      color: #777;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #777;
+
+    &:hover {
+      text-decoration: none;
+      color: #555;
+    }
+
+    mat-icon {
+      color: #777;
+    }
+  }
+
+}

@@ -1,0 +1,147 @@
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.img {
+  max-width: 60px;
+  padding-top: 10px;
+}
+
+li {
+  display: inline;
+  list-style-type: none;
+}
+
+img {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+  img { max-width: 120px; }
+}
+
+@media (min-width: 769px) {
+  img { max-width: 145px; }
+}
+
+.horizontal-scrollbar {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.panel-background-blue {
+  background: #F0F7FF;
+}
+
+.panel-background-red {
+  background: #FFF5F5;
+}
+
+.pile-background-color-red {
+  background: #EC9791;
+}
+
+.pile-background-color-yellow {
+  background: #F4F3B8;
+}
+
+.pile-background-color-green {
+  background: #96EC91;
+}
+
+.pile-background-color-blue {
+  background: #91B3EC;
+}
+
+
+
+#sky {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #000, #001f3f);
+  overflow: hidden;
+  z-index: 1;
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+  }
+
+  .moon {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    animation: glowMoon 5s infinite alternate, moveMoon 60s infinite alternate;
+  }
+}
+
+#scoreboard {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  color: #FFF;
+}
+
+#game-over, #victory {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes moveMoon {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+@keyframes glowMoon {
+  0% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  100% {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

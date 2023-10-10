@@ -1,0 +1,187 @@
+.game-board {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+
+  .computer-hand {
+    order: 1;
+  }
+
+  .discard-pile {
+    order: 2;
+    margin: auto;
+  }
+
+  .player-hand {
+    order: 3;
+  }
+
+  button {
+    order: 4;
+  }
+}
+
+.no-cards-message {
+  font-size: 18px;
+  color: red;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+
+  button {
+    margin: 0 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:disabled {
+      background-color: rgb(135, 230, 67);
+      cursor: not-allowed;
+    }
+  }
+
+  .play {
+    background-color: rgb(79, 212, 81);
+    color: white;
+
+    &:hover {
+      background-color: rgb(42, 182, 42);
+    }
+  }
+
+  .draw {
+    background-color: yellow;
+    color: black;
+
+    &:hover {
+      background-color: gold;
+    }
+  }
+}
+
+.computer-hand, .player-hand {
+  display: flex;
+  gap: 5px;
+}
+
+.card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  &.back {
+    background-color: grey;
+
+    &.selected {
+      border: 3px solid #ff0;
+      transform: scale(1.1);
+    }
+
+    &.played {
+      animation: playCard 0.5s ease-in-out;
+    }
+
+    @keyframes playCard {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+      to {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
+  }
+
+  span.selected {
+    border: 2px solid red;
+  }
+}
+
+.discard-pile {
+  .card {
+    min-width: 70px;
+    text-align: center;
+  }
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.player-hand {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.scoreboard {
+  position: absolute;
+  top: 60px;
+  right: 200px;
+  background-color: #19a3c9;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.score {
+  margin-bottom: 5px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.points {
+  margin-left: 5px;
+}
+
+.close-button {
+  position: absolute;
+  top: -5px;
+  right: 180px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hand {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .arrow {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .cards {
+    display: flex;
+    overflow: hidden;
+
+    .card {
+      flex-shrink: 0;
+      width: 80px;
+      height: auto;
+      margin: 0 5px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+

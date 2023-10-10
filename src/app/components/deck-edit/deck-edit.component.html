@@ -1,0 +1,68 @@
+<!-- Spinner de Carregamento -->
+<div *ngIf="isLoading" class="loader-container">
+  <div class="loader"></div>
+</div>
+
+<div class="button-container">
+  <button mat-raised-button class="btn-create-deck" (click)="onAddDeck(deck)">
+    <mat-icon>cloud_upload</mat-icon>
+    Criar Baralho
+  </button>
+
+  <button mat-raised-button class="btn-create-card" (click)="onAddCard(card)">
+    <mat-icon>cloud_download</mat-icon>
+    Adicionar Cartas
+  </button>
+
+  <button class="btn-play" mat-raised-button (click)="playNow()">
+    <mat-icon>pageview</mat-icon>
+    Jogar Agora!
+  </button>
+</div>
+
+
+<div class="mt-8 table-container">
+
+  <mat-table [dataSource]="decks">
+
+    <!-- Nome do Baralho -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Nome do Baralho</mat-header-cell>
+      <mat-cell *matCellDef="let deck">{{ deck.name }}</mat-cell>
+    </ng-container>
+
+    <!-- Editar -->
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef>Editar</mat-header-cell>
+      <mat-cell *matCellDef="let deck">
+        <button mat-icon-button (click)="onEdit(deck)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+
+    <!-- Deletar -->
+    <ng-container matColumnDef="delete">
+      <mat-header-cell *matHeaderCellDef>Deletar</mat-header-cell>
+      <mat-cell *matCellDef="let deck">
+        <button mat-icon-button (click)="onDelete(deck)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>
+
+  <!-- Paginação -->
+  <mat-paginator [length]="decks.length"
+                 [pageSize]="5"
+                 [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons>
+  </mat-paginator>
+
+

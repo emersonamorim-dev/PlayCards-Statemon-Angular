@@ -1,27 +1,55 @@
-# PlayCardsStatemon
+# PlayCards Statemon - Angular com TypeScript 🚀 🔄 🌐
+### Descrição
+Codifição de aplicação de Teste Técnico do Grupo Estadão em Angular com Typescript que demonstra uso de Local Store do framework para salvar dados na memória do navegador do usuário de forma funcional e bem organizada e foi implementado um Jogo de Cartas baseado na jogabilidade do UNO jogo de Cartas Infantil com a criação de um jogo de cartas interativo e a partida sendo disputada entre usuário e contra o computador. Nessa aplicação utilizei Técnicas Avançadas de Programação e utilizei várias tecnologias e práticas modernas para criar uma aplicação web responsiva e amigável.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
+### Funcionalidades
+Jogo de Cartas Interativo: Os usuários podem jogar um jogo de cartas virtual com uma interface intuitiva.
+Notificações em Tempo Real: Os usuários recebem notificações em tempo real sobre o estado do jogo.
+Responsividade: A aplicação é totalmente responsiva, proporcionando uma excelente experiência de usuário em dispositivos de todos os tamanhos.
+Personalização: Os usuários podem personalizar seus baralhos de cartas.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Pré-requisitos
+Antes de começar, certifique-se de ter o Node.js 1.6 e o Angular 8.0 instalados em seu sistema. Se não, você pode instalá-los usando os seguintes comandos:
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Instalação do Angular
 
-## Build
+```
+npm install -g @angular/cli
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+git clone https://github.com/seu-usuario/seu-projeto.git
+cd seu-projeto
+```
 
-## Running unit tests
+```
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Desenvolvimento
+Para iniciar um servidor de desenvolvimento, execute o comando abaixo. Navegue para http://localhost:4200/. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de origem.
 
-## Running end-to-end tests
+```
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+### Tecnologias Utilizadas
+1. Angular
+2. TypeScript
+3. RxJS
+4. Angular Material
+5. Sass
+6. SweetAlert2
+7. Flex-Layout
+8. Node.js e NPM
+9. Tailwindcss
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+### Autor:
+Emerson Amorim
+
+
